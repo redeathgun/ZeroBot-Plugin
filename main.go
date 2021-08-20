@@ -34,7 +34,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_setutime"     // 来份涩图
 	
 	//自用娱乐
-	_ "github.com/opensourcefuture/ZeroBot-Plugin/plugin_repeat"
+	//_ "github.com/opensourcefuture/ZeroBot-Plugin/plugin_repeat"
 	
 
 	// 以下为内置依赖，勿动

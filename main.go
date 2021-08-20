@@ -21,7 +21,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_minecraft" // MCSManager
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_music"     // 点歌
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_shindan"   // 测定
-
+	_ "github.com/tdf1939/ZeroBot-Plugin-Gif/plugin_gif"  //制图
 	// b站相关
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_bilibili" // 查询b站用户信息
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_diana"    // 嘉心糖发病

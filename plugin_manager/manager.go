@@ -24,7 +24,7 @@ const (
 		"- 解除禁言 @QQ\n" +
 		"- 我要自闭 1分钟\n" +
 		"- 开启全员禁言\n" +
-		"- 解除全员禁言\n" +
+		"- 解除全员禁言[群号(可选)]\n" +
 		"- 升为管理@QQ\n" +
 		"- 取消管理@QQ\n" +
 		"- 修改名片@QQ XXX\n" +
@@ -126,6 +126,16 @@ func init() { // 插件主体
 			)
 			ctx.SendChain(message.Text("全员自闭结束~"))
 		})
+	
+		zero.OnRegex(`^解除全员禁言.*?(\d+)`, zero.OnlyGroup, zero.AdminPermission).SetBlock(true).SetPriority(40).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SetGroupWholeBan(
+				strToInt(ctx.State["regex_matched"].([]string)[1]), // 要解除的群的群号
+				false,
+			)
+			ctx.SendChain(message.Text("全员自闭结束~"))
+		})
+	
 	// 禁言
 	zero.OnRegex(`^禁言.*?(\d+).*?\s(\d+)(.*)`, zero.OnlyGroup, zero.AdminPermission).SetBlock(true).SetPriority(40).
 		Handle(func(ctx *zero.Ctx) {

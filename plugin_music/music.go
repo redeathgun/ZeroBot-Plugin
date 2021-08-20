@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	limit = rate.NewManager(time.Second*60, 2)
+	limit2 = rate.NewManager(time.Second*60, 2)
 	m     = manager.New("Music\n 【发送/music [音乐名]】", &manager.Options{DisableOnDefault: false})
 )
 
@@ -62,7 +62,7 @@ func init() {
 	engine.UsePreHandler(m.Handler())
 
 	engine.UsePreHandler(func(ctx *zero.Ctx) bool { // 限速器
-		if !limit.Load(ctx.Event.UserID).Acquire() {
+		if !limit2.Load(ctx.Event.UserID).Acquire() {
 			ctx.Send("您的请求太快，请稍后重试0x0...")
 			return false
 		}

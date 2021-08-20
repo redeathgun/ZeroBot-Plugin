@@ -17,7 +17,7 @@ var (
 	// ATRI 所有命令的优先级
 	prio = -1
 	// ATRI 表情的 GitHub 镜像位置
-	res = "https://raw.dihe.moe/Yiwen-Chan/ZeroBot-Plugin/master/plugin_atri/"
+	res = "https://3k8hzvh3r37by.cfc-execute.bj.baidubce.com/Online-Picture/Atri/"
 	// ATRI 的总开关
 	enable = true
 )

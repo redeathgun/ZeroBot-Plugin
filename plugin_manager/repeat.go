@@ -1,4 +1,4 @@
-package repeat
+package manager
 
 import (
 	"fmt"

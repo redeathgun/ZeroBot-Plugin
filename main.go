@@ -69,7 +69,7 @@ func main() {
 		"============================================================\n",
 	) // 启动打印
 	zero.Run(zero.Config{
-		NickName:      []string{"椛椛", "ATRI", "atri", "亚托莉", "アトリ"},
+		NickName:      []string{"狐狸", "狐狸狸", "ATRI", "atri", "亚托莉", "アトリ"},
 		CommandPrefix: "/",
 
 		// SuperUsers 某些功能需要主人权限，可通过以下两种方式修改

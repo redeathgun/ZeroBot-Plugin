@@ -126,8 +126,8 @@ func init() { // 插件主体
 			)
 			ctx.SendChain(message.Text("全员自闭结束~"))
 		})
-	
-		zero.OnRegex(`^解除全员禁言.*?(\d+)`, zero.OnlyGroup, zero.AdminPermission).SetBlock(true).SetPriority(40).
+
+	zero.OnRegex(`^解除全员禁言.*?(\d+)`, zero.OnlyGroup, zero.AdminPermission).SetBlock(true).SetPriority(40).
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SetGroupWholeBan(
 				strToInt(ctx.State["regex_matched"].([]string)[1]), // 要解除的群的群号
@@ -135,7 +135,7 @@ func init() { // 插件主体
 			)
 			ctx.SendChain(message.Text("全员自闭结束~"))
 		})
-	
+
 	// 禁言
 	zero.OnRegex(`^禁言.*?(\d+).*?\s(\d+)(.*)`, zero.OnlyGroup, zero.AdminPermission).SetBlock(true).SetPriority(40).
 		Handle(func(ctx *zero.Ctx) {

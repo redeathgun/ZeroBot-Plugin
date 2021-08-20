@@ -32,6 +32,10 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_lolicon"      // lolicon 随机图片
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_saucenao"     // 以图搜图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_setutime"     // 来份涩图
+	
+	//自用娱乐
+	_ "github.com/opensourcefuture/ZeroBot-Plugin/plugin_repeat"
+	
 
 	// 以下为内置依赖，勿动
 	log "github.com/sirupsen/logrus"

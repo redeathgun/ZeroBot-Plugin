@@ -44,10 +44,10 @@ jobs:
       run: CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o artifacts/zerobot-plugin-windows-x64.exe
     - name: Build windows-x86
       run: CGO_ENABLED=0 GOOS=windows GOARCH=386 go build -ldflags="-s -w" -o artifacts/zerobot-plugin-windows-x86.exe
-    - name: Build windows-armv6
-      run: CGO_ENABLED=0 GOOS=windows GOARCH=arm GOARM=6 go build -ldflags="-s -w" -o artifacts/zerobot-plugin-windows-armv6.exe
-    - name: Build windows-arm64
-      run: CGO_ENABLED=0 GOOS=windows GOARCH=arm64 GOARM=7 go build -ldflags="-s -w" -o artifacts/zerobot-plugin-windows-arm64.exe
+#    - name: Build windows-armv6
+#      run: CGO_ENABLED=0 GOOS=windows GOARCH=arm GOARM=6 go build -ldflags="-s -w" -o artifacts/zerobot-plugin-windows-armv6.exe
+#    - name: Build windows-arm64
+#      run: CGO_ENABLED=0 GOOS=windows GOARCH=arm64 GOARM=7 go build -ldflags="-s -w" -o artifacts/zerobot-plugin-windows-arm64.exe
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2

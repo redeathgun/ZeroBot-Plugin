@@ -185,7 +185,7 @@ func init() { // 插件主体
 				ctx.SendChain(randImage("YES.png", "NO.jpg"))
 			}
 		})
-	zero.OnFullMatchGroup([]string{"啊这"}, atriSwitch(), atriSleep()).SetBlock(true).SetPriority(prio).
+	zero.OnFullMatchGroup([]string{"啊这"}, atriSwitch(), atriSleep(), zero.SuperUserPermission).SetBlock(true).SetPriority(prio).
 		Handle(func(ctx *zero.Ctx) {
 			if rand.Intn(2) == 0 {
 				ctx.SendChain(randImage("AZ.jpg", "AZ1.jpg"))
@@ -195,7 +195,7 @@ func init() { // 插件主体
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SendChain(randText("不许好！", "憋回去！"))
 		})
-	zero.OnFullMatchGroup([]string{"？", "?", "¿"}, atriSwitch(), atriSleep()).SetBlock(true).SetPriority(prio).
+	zero.OnFullMatchGroup([]string{"？", "?", "¿"}, atriSwitch(), atriSleep(), zero.SuperUserPermission).SetBlock(true).SetPriority(prio).
 		Handle(func(ctx *zero.Ctx) {
 			switch rand.Intn(5) {
 			case 0:
@@ -204,7 +204,7 @@ func init() { // 插件主体
 				ctx.SendChain(randImage("WH.jpg", "WH1.jpg", "WH2.jpg", "WH3.jpg"))
 			}
 		})
-	zero.OnKeyword("离谱", atriSwitch(), atriSleep()).SetBlock(true).SetPriority(prio).
+	zero.OnKeyword("离谱", atriSwitch(), atriSleep(), zero.SuperUserPermission).SetBlock(true).SetPriority(prio).
 		Handle(func(ctx *zero.Ctx) {
 			switch rand.Intn(5) {
 			case 0:

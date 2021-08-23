@@ -21,7 +21,8 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_minecraft" // MCSManager
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_music"     // 点歌
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_shindan"   // 测定
-	_ "github.com/tdf1939/ZeroBot-Plugin-Gif/plugin_gif"  //制图
+	_ "github.com/tdf1939/ZeroBot-Plugin-Gif/plugin_gif"     //制图
+
 	// b站相关
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_bilibili" // 查询b站用户信息
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_diana"    // 嘉心糖发病
@@ -32,10 +33,9 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_lolicon"      // lolicon 随机图片
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_saucenao"     // 以图搜图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin_setutime"     // 来份涩图
-	
+
 	//自用娱乐
 	//_ "github.com/opensourcefuture/ZeroBot-Plugin/plugin_repeat"
-	
 
 	// 以下为内置依赖，勿动
 	log "github.com/sirupsen/logrus"
@@ -76,7 +76,6 @@ func main() {
 		// []string{}：通过代码写死的方式添加主人账号
 		// os.Args[1:]：通过命令行参数的方式添加主人账号
 		SuperUsers: append([]string{"1184861155", "3501560157", "2424391365", "1770747317", "320279493", "2227300166", "1456804473", "3416885985"}, os.Args[1:]...),
-
 
 		Driver: []zero.Driver{
 			&driver.WSClient{

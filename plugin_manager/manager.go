@@ -32,6 +32,7 @@ const (
 		"- 申请头衔 XXX\n" +
 		"- 踢出群聊@QQ\n" +
 		"- 退出群聊 1234\n" +
+		"- 修改群名XXX" +
 		"- 群聊转发 1234 XXX\n" +
 		"- 私聊转发 0000 XXX\n" +
 		"- 在MM月dd日的hh点mm分时(用http://url)提醒大家XXX\n" +
@@ -234,6 +235,24 @@ func init() { // 插件主体
 			)
 			ctx.SendChain(message.Text("嗯！不错的头衔呢~"))
 		})
+	/*zero.OnRegex(`^改名(.*)`, zero.SuperUserPermission).SetBlock(true).SetPriority(40).
+	Handle(func(ctx *zero.Ctx) {
+		ctx.SetGroupSpecialTitle(
+			ctx.Event.GroupID,
+			ctx.Event.SelfID,                         // 被修改群头衔的人
+			ctx.State["regex_matched"].([]string)[1], // 修改成的群头衔
+		)
+		ctx.SendChain(message.Text("嗯！不错的名字呢~"))
+	})*/
+
+	/*zero.OnRegex(`^修改群名.*?(\d+).*?\s(.*)`, zero.AdminPermission).SetBlock(true).SetPriority(40).
+	Handle(func(ctx *zero.Ctx) {
+		ctx.SetGroupName(
+			strToInt(ctx.State["regex_matched"].([]string)[1]), // 被修改群头衔的人
+			ctx.State["regex_matched"].([]string)[1],           // 修改成的群名
+		)
+		ctx.SendChain(message.Text("嗯！已经修改了"))
+	})*/
 	// 群聊转发
 	zero.OnRegex(`^群聊转发.*?(\d+)\s(.*)`, zero.SuperUserPermission).SetBlock(true).SetPriority(40).
 		Handle(func(ctx *zero.Ctx) {

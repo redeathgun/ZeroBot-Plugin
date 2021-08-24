@@ -1,0 +1,3 @@
+[submodule "ZeroBot-Plugin-Gif"]
+	path = ZeroBot-Plugin-Gif
+	url = https://github.com/tdf1939/ZeroBot-Plugin-Gif.git

@@ -64,6 +64,7 @@ func init() {
 				var pid, uid, title, author, urls string
 				querylolicon(cmd.Args, &pid, &uid, &title, &author, &urls)
 				if urls != "" {
+					//msg_id := ctx.SendChain(message.Image(urls), message.Reply(receivedmsgid), message.Text(fmt.Sprintf("pid: %s\nuid: %s\ntitle: %s\nauthor: %s\nurl: %s", pid, uid, title, author, urls)))
 					ctx.Send(message.ReplyWithMessage(receivedmsgid, message.Text(fmt.Sprintf("pid: %s\nuid: %s\ntitle: %s\nauthor: %s\nurl: %s", pid, uid, title, author, urls))))
 					msg_id := ctx2.SendGroupMessage(ctx.Event.GroupID, message.Image(urls))
 					/*rsp := ctx.CallAction("send_group_msg", zero.Params{
@@ -73,7 +74,7 @@ func init() {
 					time.Sleep(recalltime * time.Second)
 					ctx2.DeleteMessage(msg_id)
 				} else {
-					ctx.Send("图片不存在")
+					ctx.Send("图片不存在或网络错误")
 				}
 				return true
 			})

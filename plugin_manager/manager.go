@@ -321,7 +321,7 @@ func init() { // 插件主体
 			}
 		})
 	// 随机点名
-	zero.OnFullMatchGroup([]string{"翻牌"}).SetBlock(true).SetPriority(40).
+	zero.OnFullMatchGroup([]string{"翻牌"}, zero.AdminPermission).SetBlock(true).SetPriority(40).
 		Handle(func(ctx *zero.Ctx) {
 			if ctx.Event.GroupID > 0 {
 				list := ctx.GetGroupMemberList(ctx.Event.GroupID)

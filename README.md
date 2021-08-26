@@ -74,6 +74,7 @@
     - [x] 今天是什么少女[@xxx]
     - [x] 异世界转生[@xxx]
     - [x] 卖萌[@xxx]
+    - [x] 抽老婆[@xxx]
 - **gif** `import _ "github.com/tdf1939/ZeroBot-Plugin-Gif/plugin_gif"`
     - [x] 爬[@xxx]
     - [x] 摸[@xxx]
@@ -95,6 +96,9 @@
     - [x] 设置随机图片网址[url]
     - [x] 太涩了(撤回最近发的图)
     - [x] 评价图片(发送一张图片让bot评分)
+- **浅草寺求签** `github.com/FloatTech/ZeroBot-Plugin/plugin_omikuji`
+    - 本插件要求`Go`版本大于等于`1.17`
+    - [x] @BOT 求签|运势|占卜
 - **bilibili** `import _ "github.com/FloatTech/ZeroBot-Plugin/plugin_bilibili"`
     - [x] >bili info [名字]
 - **嘉然** `import _ "github.com/FloatTech/ZeroBot-Plugin/plugin_diana"`
@@ -122,7 +126,6 @@
 | [takayama-lily/onebot](https://github.com/takayama-lily/onebot) | [OICQ](https://github.com/takayama-lily/oicq) | takayama |  |
 
 ### 使用稳定版/测试版
-> 需要将`data`目录放置到与编译好的可执行文件相同目录下才可正常执行。
 可以前往[Release](https://github.com/FloatTech/ZeroBot-Plugin/releases)页面下载对应系统版本可执行文件，编译时开启了全部插件。
 
 ### 本地运行
@@ -133,7 +136,6 @@
 5. 运行 OneBot 框架，并同时运行本插件
 
 ### 编译运行
-> 需要将`data`目录放置到与编译好的可执行文件相同目录下才可正常执行。
 
 #### 利用 Actions 在线编译 (推荐)
 1. 点击右上角 Fork 本项目，并转跳到自己 Fork 的仓库
